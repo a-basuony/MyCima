@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MyCima/static/css/main.a193f3f4.css",
+    "main.js": "/MyCima/static/js/main.e3ef8ac3.js",
+    "static/js/787.bd02f72e.chunk.js": "/MyCima/static/js/787.bd02f72e.chunk.js",
+    "static/media/fa-solid-900.ttf": "/MyCima/static/media/fa-solid-900.b48ad290d0335879a92b.ttf",
+    "static/media/fa-brands-400.ttf": "/MyCima/static/media/fa-brands-400.f9ee61fab3c11e2f3ed3.ttf",
+    "static/media/fa-solid-900.woff2": "/MyCima/static/media/fa-solid-900.66104b766c3d0462b3c5.woff2",
+    "static/media/fa-brands-400.woff2": "/MyCima/static/media/fa-brands-400.e1a247a5ef41e1975742.woff2",
+    "static/media/fa-regular-400.ttf": "/MyCima/static/media/fa-regular-400.abf801b7acb6705a15ad.ttf",
+    "static/media/image.jpg": "/MyCima/static/media/image.7d52d97ab5bff5a1ff6b.jpg",
+    "static/media/fa-regular-400.woff2": "/MyCima/static/media/fa-regular-400.639d2000c1ece92eaec8.woff2",
+    "static/media/fa-v4compatibility.ttf": "/MyCima/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
+    "static/media/fa-v4compatibility.woff2": "/MyCima/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
+    "static/media/logo.svg": "/MyCima/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/MyCima/index.html",
+    "main.a193f3f4.css.map": "/MyCima/static/css/main.a193f3f4.css.map",
+    "main.e3ef8ac3.js.map": "/MyCima/static/js/main.e3ef8ac3.js.map",
+    "787.bd02f72e.chunk.js.map": "/MyCima/static/js/787.bd02f72e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a193f3f4.css",
+    "static/js/main.e3ef8ac3.js"
+  ]
+}
