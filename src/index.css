@@ -12,7 +12,7 @@
   background-color: #727a8f;
 }
 body{
-  background-color:var(--bg-main);
+  background-color: #111;
   color: var(--main-color);
   font-family: 'Montserrat Alternates', sans-serif !important;
 }

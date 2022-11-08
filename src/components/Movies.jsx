@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState , useEffect} from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom';
+import Banner from './Banner';
 
 export default function Movies() {
 
@@ -21,6 +22,8 @@ export default function Movies() {
 
   return (
     <>
+    <Banner/>
+        <div className="container">
     {trendingMovies ?
       <div className='row justify-content-center'>
       
@@ -28,8 +31,7 @@ export default function Movies() {
         <Link to={`/movieDetails/${movie.id}`}> 
         <div className="card ">
           <img className='w-100' src={'https://image.tmdb.org/t/p/w500'+movie.poster_path} alt="" />
-          <h3 className='h6 my-2'>{movie.title}</h3>
-          <p className='descriptions '>{movie.title}</p>
+          
         </div>
         </Link>
         
@@ -48,6 +50,7 @@ export default function Movies() {
                 }
             </ul>
         </nav>
+        </div>
     </>
   )
 }

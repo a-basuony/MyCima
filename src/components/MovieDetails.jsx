@@ -23,11 +23,11 @@ const MovieDetails = () => {
 
     return (
         <div>{movieDetails ?
-            <div className="row">
-            <div className="col-md-3">
+            <div className="row mt-5">
+            <div className="col-md-3 mt-5">
                 <img className='w-100' src={`https://image.tmdb.org/t/p/w500`+movieDetails.poster_path} alt="" />
             </div>
-            <div className="col-md-9">
+            <div className="col-md-9 mt-5">
                 <h2>{movieDetails.title}</h2>
                 <p className='text-muted py-3'>{movieDetails.overview}</p>
                 <ul>

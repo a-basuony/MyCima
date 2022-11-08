@@ -1,8 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
 import {Routes , Route, Navigate ,useNavigate} from 'react-router-dom';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Header from './components/Navbar';
 import Banner from './components/Banner';
 import Home from './components/Home';
 import Movies from './components/Movies';
@@ -17,6 +15,7 @@ import { useState ,useEffect} from 'react';
 import jwtDecode from 'jwt-decode';
 import Logout from './components/Logout';
 import MovieDetails from './components/MovieDetails';
+import './App.css';
 
 
 function App() {
@@ -55,10 +54,10 @@ function App() {
   }
 
   return (
-    <div className='app'>
-      <Navbar  logOut={logOut} userData={userData}/>
-      { <Banner/>}
-      <div className='container'>
+    <div className='app mt-5'>
+      <Header  logOut={logOut} userData={userData}/>
+      {/* <Banner/> */}
+      
       <Routes>
         <Route path='' element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path='home' element={<ProtectedRoute><Home/></ProtectedRoute>} />
@@ -76,7 +75,7 @@ function App() {
         <Route path='*' element={<Notfound/>} />
         
       </Routes>
-      </div>
+      
       <Footer/>
     </div>
   );

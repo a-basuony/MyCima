@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import axios from './axios';
+import Banner from './Banner';
 import requests from './requests';
 
 
@@ -37,6 +38,8 @@ const Tv = () => {
     },[])
     return (
         <>
+        <Banner/>
+        <div className="container">
             <div className='row py-5'>
                     <div className="col-md-4 d-flex align-items-center">
                         <div>
@@ -58,54 +61,54 @@ const Tv = () => {
                     </div>)}
             </div>
     
-    <div className="row ">
-        <h2>ALL-TIME TV </h2>
-        <h4 className='text-muted'>Best Recent Tvs</h4>
-            <div className='row__posters'>
-                
-            
-                {fetchTrending.map((movie , i)=> (<div key={i} className='wrapper col-md-2 py-2'>
-                    <img 
-                    key={movie.id}
+            <div className="row ">
+                <h2>ALL-TIME TV </h2>
+                <h4 className='text-muted'>Best Recent Tvs</h4>
+                    <div className='row__posters'>
+                        
                     
-                    className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
-                    src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
-                </div>
-                ))
-                }
+                        {fetchTrending.map((movie , i)=> (<div key={i} className='wrapper col-md-2 py-2'>
+                            <img 
+                            key={movie.id}
+                            
+                            className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                            src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
+                        </div>
+                        ))
+                        }
+                    </div>
+                    <div className='row__posters'>
+                        
+                        {fetchDocumantaries.map(movie=> (
+                            <img 
+                            key={movie.id}
+                            
+                            className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                            src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
+                        ))}
+                    </div>
+                    <div className='row__posters'>
+                        
+                        {fetchNetflixOriginals.map(movie=> (
+                            <img 
+                            key={movie.id}
+                            
+                            className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                            src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
+                        ))}
+                    </div>
+                    <div className='row__posters'>
+                        
+                        {fetchTopRated.map(movie=> (
+                            <img 
+                            key={movie.id}
+                            
+                            className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                            src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
+                        ))}
+                    </div>
             </div>
-            <div className='row__posters'>
-                
-                {fetchDocumantaries.map(movie=> (
-                    <img 
-                    key={movie.id}
-                    
-                    className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
-                    src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
-                ))}
-            </div>
-            <div className='row__posters'>
-                
-                {fetchNetflixOriginals.map(movie=> (
-                    <img 
-                    key={movie.id}
-                    
-                    className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
-                    src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
-                ))}
-            </div>
-            <div className='row__posters'>
-                
-                {fetchTopRated.map(movie=> (
-                    <img 
-                    key={movie.id}
-                    
-                    className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
-                    src={`${base_url}${isLargeRow? movie.poster_path : movie.backdrop_path}`} alt={movie.name}/>
-                ))}
-            </div>
-    </div>
-
+        </div>
         </>
     );
 }

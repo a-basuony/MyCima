@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from './Banner'
 
 
 const ContactForm = () => {
@@ -18,8 +19,11 @@ const ContactForm = () => {
     console.log(conFom)
   }
   return (
-    <div className="container m-5">
-      <h2 className="mb-3">React Contact Form Component Example</h2>
+    <>
+    
+    <div className="container m-5 p-md-5">
+      <div className="conatcts">
+      <h2 className="my-5">Have You Any Project? Please Drop a Message</h2>
       <form onSubmit={onSubmit}>
         <div className="mb-3">
           <label className="form-label text-light" htmlFor="name">
@@ -34,16 +38,18 @@ const ContactForm = () => {
           <input className="form-control  bg-transparent" type="email" placeholder="basouny85@gmail.com" id="email" required />
         </div>
         <div className="mb-3">
-          <label className="form-label text-light" htmlFor="message">
+          <label className="form-label text-light"  htmlFor="message">
             Message:
           </label>
-          <textarea className="form-control text-light bg-transparent" id="message" required />
+          <textarea className="form-control text-light bg-transparent" placeholder='Write a message' id="message" required />
         </div>
         <button className="btn btn-dark" type="submit">
           {formStatus}
         </button>
       </form>
+      </div>
     </div>
+    </>
   )
 }
 export default ContactForm

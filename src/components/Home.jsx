@@ -4,6 +4,7 @@ import './Home.css'
 import image from '../components/image.jpg'
 import { Link } from 'react-router-dom';
 import requests from './requests';
+import Banner from './Banner';
 
 
 const base_url= 'https://image.tmdb.org/t/p/original/';
@@ -55,7 +56,8 @@ export default function Home() {
 
   return (
     <>
-    
+    <Banner/>
+    <div className='container pt-5'>
     <div className='row'>
       <div className="col-md-4 d-flex align-items-center">
         <div>
@@ -65,7 +67,7 @@ export default function Home() {
         <div className="brdr mt-4 "></div>
         </div>
       </div>
-      {trendingMovies.map((movie, i )=> <div key={i} className='wrapper col-md-2 py-2'>
+      {trendingMovies.map((movie, i )=> <div key={i} className='wrapper col-md-4 col-lg-2 py-2'>
         <Link to={`/movieDetails/${movie.id}`}> 
         <div className="card ">
           <img className='w-100' src={'https://image.tmdb.org/t/p/w500'+movie.poster_path} alt="" />
@@ -98,7 +100,6 @@ export default function Home() {
       </div>)}
 
     </div>
-    
     
     <div className="row ">
       <h2>ALL-TIME BOX-OFFICE </h2>
@@ -187,7 +188,7 @@ export default function Home() {
           </div>
     </div>
 
-    <div className='row py-5'>
+    <div className='row py-5 '>
       <div className="col-md-4 d-flex align-items-center">
         <div>
         <div className="brdr mb-4 w-25"></div>
@@ -200,14 +201,15 @@ export default function Home() {
 
         <div className="card ">
           {person.profile_path === null ? <img src={image} className='w-100 ' alt="" />:<img className='w-100' src={'https://image.tmdb.org/t/p/w500'+person.profile_path} alt="" />}
-          
+{/*           
           <h3 className='descriptions py-5'>{person.name}</h3>
-          <p className='text-muted'>{person.original_name}</p>
+          <p className='text-muted'>{person.original_name}</p> */}
         
         </div>
       
       </div>)}
 
+    </div>
     </div>
     </>
   )

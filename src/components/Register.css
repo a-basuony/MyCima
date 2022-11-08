@@ -1,0 +1,7 @@
+.register{
+    height: 80vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'
 
 const Login = (props) => {
 
@@ -41,7 +42,7 @@ const Login = (props) => {
             if(data.message ==='success'){
                 localStorage.setItem('userToken', data.token);
                 props.saveUserData();
-                navigate('./home')
+                navigate('/home')
                 //home sign in
                 setIsLoading(false);
             }else{
@@ -67,7 +68,10 @@ const Login = (props) => {
     }
 
     return (
-        <div className='w-75 mx-auto'>
+        <>
+        <div className="container py-5">
+        <div className='login w-75 mx-auto '>
+
 
             <h2> Login Now</h2>
             {error?<div className='alert alert-danger'> {error}</div> : ''}
@@ -88,6 +92,8 @@ const Login = (props) => {
                     {isLoading === true ? <i class="fa fa-spin fa-2x fa-spinner"></i> :" Login" }</button>
             </form>
         </div>
+        </div>
+        </>
     );
 }
 

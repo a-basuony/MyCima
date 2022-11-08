@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Axios from 'axios';
 import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
+import './Register.css'
 
 const Register = () => {
 
@@ -66,7 +67,9 @@ const Register = () => {
     }
 
     return (
-        <div className='w-75 mx-auto'>
+        <>
+        <div className="container">
+        <div className= ' register w-75 mx-auto'>
 
             <h2> Register Now</h2>
             {error?<div className='alert alert-danger'> {error}</div> : ''}
@@ -94,6 +97,8 @@ const Register = () => {
                     {isLoading === true ? <i class="fa fa-spin fa-2x fa-spinner"></i> :" Register" }</button>
             </form>
         </div>
+        </div>
+        </>
     );
 }
 
